@@ -144,6 +144,7 @@ var componentName = "wb-lbx",
 						$content = this.contentContainer,
 						$wrap = this.wrap,
 						$modal = $wrap.find( ".modal-dialog" ),
+						$container = $wrap.prev( ".mfp-bg" ),
 						$buttons = $wrap.find( ".mfp-close, .mfp-arrow" ),
 						len = $buttons.length,
 						i, button;
@@ -168,6 +169,10 @@ var componentName = "wb-lbx",
 						.trigger( "wb-activate" );
 
 					this.contentContainer.attr( "data-pgtitle", document.getElementsByTagName( "H1" )[ 0 ].textContent );
+
+					if ( $modal.hasClass( "mfp-bg-light" ) ) {
+						$container.addClass( "mfp-bg-light" );
+					}
 				},
 				close: function() {
 					$document.find( "body" ).removeClass( "wb-modal" );

@@ -87,6 +87,11 @@
 
 .mfp-bg {
 	opacity: .97;
+
+	/* Lighten up orvelay background */
+	&.mfp-bg-light {
+		opacity: .5;
+	}
 }
 
 .wb-overlay-dlg {
